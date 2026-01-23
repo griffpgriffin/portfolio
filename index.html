@@ -111,9 +111,10 @@
       margin-bottom: 30px;
     }
 
+    /* IMAGE GRID */
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 26px;
     }
 
@@ -121,6 +122,20 @@
       width: 100%;
       display: block;
       border-radius: 6px;
+    }
+
+    .image-grid .featured {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 800px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .image-grid .featured {
+        grid-column: span 1;
+      }
     }
 
     .work-list {
@@ -163,7 +178,7 @@
       <div class="hero-grid">
         <div class="hero-stat">
           <h3>65M+</h3>
-          <p>Views on personal YouTube channel</p>
+          <p>YouTube views on personal channel</p>
         </div>
         <div class="hero-stat">
           <h3>#1</h3>
@@ -194,17 +209,17 @@
     </header>
 
     <!-- FEATURED WORK -->
-   <section>
-  <h2>Featured Work</h2>
-  <div class="image-grid">
-    <img src="images/xbox.png" alt="Xbox work" class="featured">
-    <img src="images/equiti-site.png" alt="Equiti site campaign">
-    <img src="images/equiti-youtube.png" alt="Equiti YouTube campaign">
-    <img src="images/newsweek.png" alt="Newsweek articles">
-    <img src="images/steam.png" alt="Frontier Developments on Steam" class="featured">
-    <img src="images/the-sun.jpg" alt="The Sun coverage">
-  </div>
-</section>
+    <section>
+      <h2>Featured Work</h2>
+      <div class="image-grid">
+        <img src="images/xbox.png" alt="Xbox work" class="featured">
+        <img src="images/equiti-youtube.png" alt="Equiti YouTube campaign" class="featured">
+        <img src="images/steam.png" alt="Frontier Developments on Steam" class="featured">
+        <img src="images/equiti-site.png" alt="Equiti site campaign">
+        <img src="images/newsweek.png" alt="Newsweek articles">
+        <img src="images/the-sun.jpg" alt="The Sun coverage">
+      </div>
+    </section>
 
     <!-- SELECTED WRITING & BRAND WORK -->
     <section>
@@ -237,7 +252,7 @@
         <div class="work-item">
           <h3>Frontier Developments</h3>
           <p>
-            Lead copywriter on major video game launches including Jurassic World Evolution 2,
+            Lead copywriter on major game launches including Jurassic World Evolution 2,
             supporting global campaigns and commercial storytelling.
           </p>
         </div>
@@ -249,8 +264,7 @@
       <h2>Content Creation</h2>
       <p class="subtitle">
         Personal YouTube channel with <strong>100,000 subscribers</strong> and
-        <strong>65+ million total views</strong>, alongside branded campaigns and content that
-        generates millions of views.
+        <strong>65+ million total views</strong>, alongside branded campaigns and content that generate millions of views.
       </p>
     </section>
 
