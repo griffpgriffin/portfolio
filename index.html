@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Griff Griffin — Copywriter & Content Creator</title>
+  <title>Griff Griffin – Copywriter & Content Creator</title>
 
   <style>
     :root {
-      --bg: #0f1115;
-      --card: #171a21;
-      --text: #e6e6eb;
-      --muted: #a0a4b8;
-      --accent: #4ea1ff;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555;
+      --card: #f4f4f4;
+      --accent: #000000;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #f5f5f5;
+      --muted: #aaa;
+      --card: #1a1a1a;
+      --accent: #ffffff;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -25,27 +33,42 @@
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 48px 24px;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 8px;
+      font-size: 2.8rem;
+      margin: 0;
     }
 
-    .tagline {
-      font-size: 1.1rem;
+    .subtitle {
       color: var(--muted);
-      max-width: 760px;
+      max-width: 600px;
+      margin-top: 10px;
+    }
+
+    button {
+      background: none;
+      border: 1px solid var(--text);
+      color: var(--text);
+      padding: 8px 14px;
+      cursor: pointer;
     }
 
     section {
-      margin-top: 64px;
+      margin-bottom: 70px;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 24px;
+      font-size: 1.9rem;
+      margin-bottom: 25px;
     }
 
     .grid {
@@ -56,13 +79,8 @@
 
     .card {
       background: var(--card);
-      border-radius: 14px;
+      border-radius: 6px;
       overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
     }
 
     .card img {
@@ -71,138 +89,111 @@
     }
 
     .card-content {
-      padding: 18px;
+      padding: 16px;
     }
 
-    .card h3 {
+    .card-content h3 {
       margin: 0 0 6px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
-    .card p {
+    .card-content p {
       margin: 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    .stats {
-      margin-top: 32px;
-      font-size: 1.05rem;
-      color: var(--muted);
-    }
-
     footer {
-      margin-top: 80px;
-      padding-top: 24px;
-      border-top: 1px solid #222;
+      text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-
-    <!-- HERO -->
     <header>
-      <h1>Griff Griffin</h1>
-      <p class="tagline">
-        Award-winning copywriter and content creator with significant experience
-        working with global brands across finance, entertainment, culture, and media.
-      </p>
-
-      <p class="stats">
-        65M+ video views · 100K+ subscribers · Global brand & editorial experience
-      </p>
+      <div>
+        <h1>Griff Griffin</h1>
+        <p class="subtitle">
+          Award-winning copywriter and content creator with significant experience
+          working with global brands across finance, entertainment, culture, and media.
+        </p>
+      </div>
+      <button onclick="document.body.classList.toggle('dark')">
+        Toggle Dark Mode
+      </button>
     </header>
 
-    <!-- FEATURED WORK -->
+    <!-- SELECTED WORK -->
     <section>
-      <h2>Featured Writing & Brand Work</h2>
-
+      <h2>Selected Writing & Brand Work</h2>
       <div class="grid">
-
-        <!-- EQUITI SITE -->
         <div class="card">
-          <img src="images/equiti site.png" alt="Equiti website campaign">
+          <img src="xbox.png" alt="Xbox" />
           <div class="card-content">
-            <h3>Equiti — Web & Campaign Copy</h3>
-            <p>
-              Product, campaign, and landing-page copy supporting a global fintech brand.
-            </p>
+            <h3>Xbox</h3>
+            <p>Campaign and editorial copy for major gaming releases.</p>
           </div>
         </div>
 
-        <!-- EQUITI YOUTUBE -->
         <div class="card">
-          <img src="images/equiti youtube.png" alt="Equiti YouTube video">
+          <img src="equiti-site.png" alt="Equiti" />
           <div class="card-content">
-            <h3>Equiti — Video Content</h3>
-            <p>
-              High-performing paid and organic video copy, including ads with 20M+ views.
-            </p>
+            <h3>Equiti</h3>
+            <p>Global fintech campaigns, ads, and social creative.</p>
           </div>
         </div>
 
-        <!-- NEWSWEEK -->
         <div class="card">
-          <img src="images/newsweek.png" alt="Newsweek author page">
+          <img src="newsweek.png" alt="Newsweek" />
           <div class="card-content">
             <h3>Newsweek</h3>
-            <p>
-              High-traffic entertainment and culture reporting with strong SEO performance.
-            </p>
+            <p>High-traffic entertainment reporting with a strong SEO focus.</p>
           </div>
         </div>
 
-        <!-- FRONTIER / STEAM -->
         <div class="card">
-          <img src="images/steam.png" alt="Jurassic World Evolution 2 Steam page">
+          <img src="steam.png" alt="Frontier Developments" />
           <div class="card-content">
             <h3>Frontier Developments</h3>
-            <p>
-              Lead copywriter on major releases including Jurassic World Evolution 2.
-            </p>
+            <p>Lead copywriter on Jurassic World Evolution 2.</p>
           </div>
         </div>
-
-        <!-- THE SUN -->
-        <div class="card">
-          <img src="images/the sun.jpg" alt="The Sun review">
-          <div class="card-content">
-            <h3>The Sun</h3>
-            <p>
-              High-impact gaming and tech reviews for a mass-market audience.
-            </p>
-          </div>
-        </div>
-
-        <!-- XBOX -->
-        <div class="card">
-          <img src="images/xbox.png" alt="Xbox On content">
-          <div class="card-content">
-            <h3>Xbox (Microsoft)</h3>
-            <p>
-              Producer and copywriter for Xbox On, creating scripts and social copy
-              for a global audience.
-            </p>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      Contact: <a href="mailto:griffpgriffin@gmail.com">griffpgriffin@gmail.com</a>
-    </footer>
+    <!-- CONTENT CREATION -->
+    <section>
+      <h2>Content Creation</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="equiti-youtube.png" alt="YouTube Campaign" />
+          <div class="card-content">
+            <h3>YouTube Campaigns</h3>
+            <p>65M+ views across branded and original content.</p>
+          </div>
+        </div>
 
+        <div class="card">
+          <img src="the-sun.jpg" alt="The Sun Review" />
+          <div class="card-content">
+            <h3>Game Reviews</h3>
+            <p>Top-performing reviews across major UK publications.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="subtitle" style="margin-top:20px;">
+        Personal YouTube channel with over <strong>100,000 subscribers</strong>
+        and <strong>65+ million total views</strong>.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Griff Griffin
+    </footer>
   </div>
 </body>
 </html>
