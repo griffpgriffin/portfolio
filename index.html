@@ -62,7 +62,7 @@
     .stats {
       display: flex;
       gap: 40px;
-      margin: 30px 0 10px;
+      margin: 30px 0;
       padding: 20px 0;
       border-top: 2px solid var(--border);
       border-bottom: 2px solid var(--border);
@@ -83,12 +83,6 @@
       text-decoration: underline;
     }
 
-    footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
     .toggle {
       position: fixed;
       top: 20px;
@@ -100,83 +94,100 @@
       color: var(--text);
       cursor: pointer;
     }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: var(--muted);
+    }
   </style>
 </head>
 
 <body>
-  <button class="toggle" onclick="toggleDark()">Dark mode</button>
 
-  <header>
-    <h1>Griff Griffin</h1>
+<button class="toggle" onclick="toggleDark()">Dark mode</button>
 
-    <p class="intro">
-      Award-winning copywriter and content creator with significant experience
-      working with global brands across finance, entertainment, culture, and media.
-    </p>
+<header>
+  <h1>Griff Griffin</h1>
 
-    <div class="stats">
-      <div class="stat"><strong>65M+</strong>YouTube Views</div>
-      <div class="stat"><strong>100K+</strong>Subscribers</div>
-      <div class="stat"><strong>Global</strong>Brands & Publishers</div>
+  <p class="intro">
+    Award-winning copywriter and content creator with significant experience
+    working with global brands across finance, entertainment, culture, and media.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <strong>65M+</strong>
+      YouTube Views
     </div>
-
-    <p class="contact">
-      griffpgriffin@gmail.com · 07301572250
-    </p>
-  </header>
-
-  <section>
-    <h2>Content Creation</h2>
-
-    <div class="work-item">
-      <strong>YouTube (Personal Channel)</strong><br>
-      Writing, producing, and publishing original video content generating over
-      65 million views and an audience of 100k+ subscribers.<br>
-      <a href="#">View channel</a>
+    <div class="stat">
+      <strong>100K+</strong>
+      Subscribers
     </div>
-
-    <div class="work-item">
-      <strong>Microsoft – Xbox On</strong><br>
-      Producer and copywriter on Microsoft’s official Xbox YouTube channel,
-      delivering scripted and social content at global scale.<br>
-      <a href="#">View examples</a>
+    <div class="stat">
+      <strong>Global</strong>
+      Brands & Publishers
     </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>Selected Writing & Brand Work</h2>
+  <p class="contact">
+    griffpgriffin@gmail.com · 07301572250
+  </p>
+</header>
 
-    <div class="work-item">
-      <strong>Newsweek</strong><br>
-      High-traffic entertainment and culture reporting with a strong SEO focus.<br>
-      <a href="#">View examples</a>
-    </div>
+<!-- SELECTED WORK FIRST -->
+<section>
+  <h2>Selected Writing & Brand Work</h2>
 
-    <div class="work-item">
-      <strong>Netflix (Tudum)</strong><br>
-      Long-form features, interviews, and first looks for major global releases.<br>
-      <a href="#">View examples</a>
-    </div>
+  <div class="work-item">
+    <strong>Microsoft – Xbox</strong><br>
+    Producer and copywriter on Microsoft’s official Xbox channels, delivering
+    scripted, social, and branded content to a global audience.<br>
+    <a href="#">View examples</a>
+  </div>
 
-    <div class="work-item">
-      <strong>Frontier Developments</strong><br>
-      Lead copywriter on major game launches including Jurassic World Evolution 2.
-    </div>
+  <div class="work-item">
+    <strong>Equiti</strong><br>
+    Campaign, product, and social copy supporting the global launch of the
+    Equiti trading app across Europe, the Middle East, and Africa.<br>
+    <a href="#">View examples</a>
+  </div>
 
-    <div class="work-item">
-      <strong>Equiti</strong><br>
-      Campaign and product copy supporting a global fintech app launch.
-    </div>
-  </section>
+  <div class="work-item">
+    <strong>Newsweek</strong><br>
+    High-traffic entertainment and culture reporting with a strong focus on
+    SEO, search trends, and evergreen performance.<br>
+    <a href="#">View examples</a>
+  </div>
 
-  <footer>
-    © 2026 Griff Griffin
-  </footer>
+  <div class="work-item">
+    <strong>Frontier Developments</strong><br>
+    Lead copywriter on major game launches including Jurassic World Evolution 2,
+    delivering campaign, social, and digital copy at scale.
+  </div>
+</section>
 
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle("dark");
-    }
-  </script>
+<!-- CONTENT CREATION BELOW -->
+<section>
+  <h2>Content Creation</h2>
+
+  <div class="work-item">
+    <strong>YouTube (Personal Channel)</strong><br>
+    Writing, producing, and publishing original video content generating over
+    65 million views and an audience of 100k+ subscribers.<br>
+    <a href="#">View channel</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Griff Griffin
+</footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+  }
+</script>
+
 </body>
 </html>
