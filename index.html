@@ -4,17 +4,33 @@
   <meta charset="UTF-8">
   <title>Griff Griffin | Award-Winning Copywriter & Content Creator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --border: #000000;
+      --muted: #555555;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #f2f2f2;
+      --border: #f2f2f2;
+      --muted: #aaaaaa;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 40px;
-      background: #ffffff;
-      color: #111;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     h1 {
@@ -25,7 +41,7 @@
     h2 {
       margin-top: 50px;
       font-size: 26px;
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 6px;
     }
 
@@ -43,8 +59,19 @@
       font-size: 16px;
     }
 
-    .highlight {
-      font-weight: bold;
+    .stats {
+      display: flex;
+      gap: 40px;
+      margin: 30px 0 10px;
+      padding: 20px 0;
+      border-top: 2px solid var(--border);
+      border-bottom: 2px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .stat strong {
+      font-size: 28px;
+      display: block;
     }
 
     .work-item {
@@ -52,19 +79,32 @@
     }
 
     a {
-      color: #000;
+      color: var(--text);
       text-decoration: underline;
     }
 
     footer {
       margin-top: 80px;
       font-size: 14px;
-      color: #555;
+      color: var(--muted);
+    }
+
+    .toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      font-size: 14px;
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
+  <button class="toggle" onclick="toggleDark()">Dark mode</button>
 
   <header>
     <h1>Griff Griffin</h1>
@@ -74,12 +114,11 @@
       working with global brands across finance, entertainment, culture, and media.
     </p>
 
-    <p class="intro">
-      Creator of a personal YouTube channel with <span class="highlight">65+ million
-      total views</span> and <span class="highlight">100,000+ subscribers</span>,
-      specialising in audience-first storytelling, performance-led formats,
-      and viral entertainment content.
-    </p>
+    <div class="stats">
+      <div class="stat"><strong>65M+</strong>YouTube Views</div>
+      <div class="stat"><strong>100K+</strong>Subscribers</div>
+      <div class="stat"><strong>Global</strong>Brands & Publishers</div>
+    </div>
 
     <p class="contact">
       griffpgriffin@gmail.com · 07301572250
@@ -90,18 +129,16 @@
     <h2>Content Creation</h2>
 
     <div class="work-item">
-      <span class="highlight">YouTube (Personal Channel)</span><br>
-      Writing, producing, and publishing original long-form and short-form
-      video content, generating over 65 million views organically and growing
-      an engaged audience of 100k+ subscribers.<br>
+      <strong>YouTube (Personal Channel)</strong><br>
+      Writing, producing, and publishing original video content generating over
+      65 million views and an audience of 100k+ subscribers.<br>
       <a href="#">View channel</a>
     </div>
 
     <div class="work-item">
-      <span class="highlight">Microsoft – Xbox On</span><br>
+      <strong>Microsoft – Xbox On</strong><br>
       Producer and copywriter on Microsoft’s official Xbox YouTube channel,
-      helping deliver scripted and social content to a global audience of
-      hundreds of millions.<br>
+      delivering scripted and social content at global scale.<br>
       <a href="#">View examples</a>
     </div>
   </section>
@@ -110,38 +147,25 @@
     <h2>Selected Writing & Brand Work</h2>
 
     <div class="work-item">
-      <span class="highlight">Newsweek</span><br>
-      High-traffic entertainment, TV, and culture reporting with a strong focus
-      on SEO, search trends, and evergreen performance.<br>
+      <strong>Newsweek</strong><br>
+      High-traffic entertainment and culture reporting with a strong SEO focus.<br>
       <a href="#">View examples</a>
     </div>
 
     <div class="work-item">
-      <span class="highlight">Netflix (Tudum)</span><br>
-      Long-form features, interviews, first looks, and promotional editorial
-      supporting major global Netflix releases.<br>
+      <strong>Netflix (Tudum)</strong><br>
+      Long-form features, interviews, and first looks for major global releases.<br>
       <a href="#">View examples</a>
     </div>
 
     <div class="work-item">
-      <span class="highlight">Frontier Developments</span><br>
-      Lead copywriter on major game launches including Jurassic World Evolution 2,
-      delivering campaign, social, and digital copy at scale.<br>
-      <a href="#">View examples</a>
+      <strong>Frontier Developments</strong><br>
+      Lead copywriter on major game launches including Jurassic World Evolution 2.
     </div>
 
     <div class="work-item">
-      <span class="highlight">Equiti</span><br>
-      Product, social, and campaign copy supporting the global launch of the
-      Equiti trading app across Europe, the Middle East, and Africa.<br>
-      <a href="#">View examples</a>
-    </div>
-
-    <div class="work-item">
-      <span class="highlight">PCGamesN / The Sun / Sports Illustrated</span><br>
-      Editorial, lifestyle, and sponsored content tailored to large,
-      fast-moving digital audiences.<br>
-      <a href="#">View examples</a>
+      <strong>Equiti</strong><br>
+      Campaign and product copy supporting a global fintech app launch.
     </div>
   </section>
 
@@ -149,5 +173,10 @@
     © 2026 Griff Griffin
   </footer>
 
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
