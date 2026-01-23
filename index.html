@@ -1,193 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Griff Griffin | Award-Winning Copywriter & Content Creator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Griff Griffin — Copywriter & Content Creator</title>
 
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --border: #000000;
-      --muted: #555555;
-    }
-
-    body.dark {
-      --bg: #0f0f0f;
-      --text: #f2f2f2;
-      --border: #f2f2f2;
-      --muted: #aaaaaa;
+      --bg: #0f1115;
+      --card: #171a21;
+      --text: #e6e6eb;
+      --muted: #a0a4b8;
+      --accent: #4ea1ff;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 48px 24px;
     }
 
     h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
+      font-size: 2.6rem;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    section {
+      margin-top: 64px;
     }
 
     h2 {
-      margin-top: 50px;
-      font-size: 26px;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 6px;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
     }
 
-    p {
-      margin: 10px 0;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
-    .intro {
-      font-size: 18px;
-      max-width: 780px;
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
     }
 
-    .contact {
-      margin-top: 10px;
-      font-size: 16px;
+    .card:hover {
+      transform: translateY(-4px);
     }
 
-    .stats {
-      display: flex;
-      gap: 40px;
-      margin: 30px 0;
-      padding: 20px 0;
-      border-top: 2px solid var(--border);
-      border-bottom: 2px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    .stat strong {
-      font-size: 28px;
+    .card img {
+      width: 100%;
       display: block;
     }
 
-    .work-item {
-      margin-bottom: 25px;
+    .card-content {
+      padding: 18px;
     }
 
-    a {
-      color: var(--text);
-      text-decoration: underline;
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
     }
 
-    .toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 8px 14px;
-      font-size: 14px;
-      background: transparent;
-      border: 2px solid var(--border);
-      color: var(--text);
-      cursor: pointer;
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      margin-top: 32px;
+      font-size: 1.05rem;
+      color: var(--muted);
     }
 
     footer {
       margin-top: 80px;
-      font-size: 14px;
+      padding-top: 24px;
+      border-top: 1px solid #222;
       color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-<button class="toggle" onclick="toggleDark()">Dark mode</button>
+    <!-- HERO -->
+    <header>
+      <h1>Griff Griffin</h1>
+      <p class="tagline">
+        Award-winning copywriter and content creator with significant experience
+        working with global brands across finance, entertainment, culture, and media.
+      </p>
 
-<header>
-  <h1>Griff Griffin</h1>
+      <p class="stats">
+        65M+ video views · 100K+ subscribers · Global brand & editorial experience
+      </p>
+    </header>
 
-  <p class="intro">
-    Award-winning copywriter and content creator with significant experience
-    working with global brands across finance, entertainment, culture, and media.
-  </p>
+    <!-- FEATURED WORK -->
+    <section>
+      <h2>Featured Writing & Brand Work</h2>
 
-  <div class="stats">
-    <div class="stat">
-      <strong>65M+</strong>
-      YouTube Views
-    </div>
-    <div class="stat">
-      <strong>100K+</strong>
-      Subscribers
-    </div>
-    <div class="stat">
-      <strong>Global</strong>
-      Brands & Publishers
-    </div>
+      <div class="grid">
+
+        <!-- XBOX -->
+        <div class="card">
+          <img src="images/xbox.jpg" alt="Xbox On content">
+          <div class="card-content">
+            <h3>Xbox (Microsoft)</h3>
+            <p>
+              Producer and copywriter on Xbox On, creating scripts, formats, and
+              social copy for a global audience of 350M+ viewers.
+            </p>
+          </div>
+        </div>
+
+        <!-- EQUITI -->
+        <div class="card">
+          <img src="images/equiti.jpg" alt="Equiti campaign">
+          <div class="card-content">
+            <h3>Equiti</h3>
+            <p>
+              Campaign, product, and social copy for a global fintech brand,
+              including high-performing video ads with 20M+ views.
+            </p>
+          </div>
+        </div>
+
+        <!-- NEWSWEEK -->
+        <div class="card">
+          <img src="images/newsweek.jpg" alt="Newsweek author page">
+          <div class="card-content">
+            <h3>Newsweek</h3>
+            <p>
+              High-traffic entertainment and culture reporting with a strong SEO
+              focus for a global readership.
+            </p>
+          </div>
+        </div>
+
+        <!-- FRONTIER -->
+        <div class="card">
+          <img src="images/frontier.jpg" alt="Jurassic World Evolution 2 Steam page">
+          <div class="card-content">
+            <h3>Frontier Developments</h3>
+            <p>
+              Lead copywriter on major game launches including
+              <em>Jurassic World Evolution 2</em>, supporting global campaigns.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      Contact: <a href="mailto:griffpgriffin@gmail.com">griffpgriffin@gmail.com</a>
+    </footer>
+
   </div>
-
-  <p class="contact">
-    griffpgriffin@gmail.com · 07301572250
-  </p>
-</header>
-
-<!-- SELECTED WORK FIRST -->
-<section>
-  <h2>Selected Writing & Brand Work</h2>
-
-  <div class="work-item">
-    <strong>Microsoft – Xbox</strong><br>
-    Producer and copywriter on Microsoft’s official Xbox channels, delivering
-    scripted, social, and branded content to a global audience.<br>
-    <a href="#">View examples</a>
-  </div>
-
-  <div class="work-item">
-    <strong>Equiti</strong><br>
-    Campaign, product, and social copy supporting the global launch of the
-    Equiti trading app across Europe, the Middle East, and Africa.<br>
-    <a href="#">View examples</a>
-  </div>
-
-  <div class="work-item">
-    <strong>Newsweek</strong><br>
-    High-traffic entertainment and culture reporting with a strong focus on
-    SEO, search trends, and evergreen performance.<br>
-    <a href="#">View examples</a>
-  </div>
-
-  <div class="work-item">
-    <strong>Frontier Developments</strong><br>
-    Lead copywriter on major game launches including Jurassic World Evolution 2,
-    delivering campaign, social, and digital copy at scale.
-  </div>
-</section>
-
-<!-- CONTENT CREATION BELOW -->
-<section>
-  <h2>Content Creation</h2>
-
-  <div class="work-item">
-    <strong>YouTube (Personal Channel)</strong><br>
-    Writing, producing, and publishing original video content generating over
-    65 million views and an audience of 100k+ subscribers.<br>
-    <a href="#">View channel</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Griff Griffin
-</footer>
-
-<script>
-  function toggleDark() {
-    document.body.classList.toggle("dark");
-  }
-</script>
-
 </body>
 </html>
