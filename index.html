@@ -27,13 +27,13 @@ margin: 0;
 font-family: Arial, Helvetica, sans-serif;
 background: var(--bg);
 color: var(--text);
-line-height: 1.5;
+line-height: 1.6;
 }
 
 .container {
 max-width: 1100px;
 margin: auto;
-padding: 28px 18px;
+padding: 32px 18px;
 }
 
 /* HERO PANEL */
@@ -41,7 +41,7 @@ padding: 28px 18px;
 background: var(--card);
 padding: 22px 18px;
 border-radius: 10px;
-margin-bottom: 40px;
+margin-bottom: 35px;
 }
 
 .hero-grid {
@@ -66,7 +66,7 @@ header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom: 30px;
+margin-bottom: 25px;
 gap: 20px;
 }
 
@@ -87,7 +87,6 @@ object-fit: cover;
 h1 {
 font-size: 2.4rem;
 margin: 0;
-letter-spacing: -0.5px;
 }
 
 .subtitle {
@@ -105,9 +104,9 @@ cursor: pointer;
 border-radius: 4px;
 }
 
-/* YouTube TOP LINK BLOCK */
+/* YOUTUBE TOP */
 .youtube-top {
-margin: 10px 0 25px;
+margin: 10px 0 22px;
 padding: 14px 16px;
 background: var(--card);
 border-radius: 10px;
@@ -115,7 +114,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
-gap: 10px;
 }
 
 .youtube-top a {
@@ -132,50 +130,52 @@ border-bottom: 1px solid var(--text);
 
 /* SECTIONS */
 section {
-margin-bottom: 50px;
+margin-bottom: 45px;
 }
 
 h2 {
 font-size: 1.6rem;
 margin-bottom: 18px;
-letter-spacing: -0.3px;
 }
 
-/* IMAGE GRID — AGENCY STYLE */
+/* IMAGE GRID */
 .image-grid {
 display: grid;
 grid-template-columns: repeat(12, 1fr);
 gap: 14px;
 }
 
-/* base images */
 .image-grid img {
 width: 100%;
-height: 170px;
-object-fit: cover;
+height: auto;
 display: block;
 border-radius: 10px;
-transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
-will-change: transform;
+transition: transform 0.35s ease, box-shadow 0.35s ease;
+transform-origin: center;
 }
 
-/* hover zoom effect */
+/* hover zoom */
 .image-grid img:hover {
-transform: scale(1.04);
-box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-filter: brightness(1.02);
+transform: scale(1.03);
+box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-/* LCP / HERO IMAGE (smaller + cleaner) */
+/* LCP image (smaller, no cropping) */
 .image-grid .hero {
 grid-column: span 12;
-height: 300px;
+max-height: 320px;
+object-fit: contain;
+background: #00000008;
+padding: 10px;
 border-radius: 12px;
 }
 
-/* tighter grid items (agency layout feel) */
+/* other images */
 .image-grid img:not(.hero) {
 grid-column: span 3;
+object-fit: contain;
+background: #00000005;
+padding: 6px;
 }
 
 /* RESPONSIVE */
@@ -183,22 +183,15 @@ grid-column: span 3;
 .image-grid img:not(.hero) {
 grid-column: span 6;
 }
-
-.image-grid .hero {
-height: 220px;
-}
 }
 
 @media (max-width: 600px) {
 .image-grid img:not(.hero) {
 grid-column: span 12;
 }
-
-.image-grid .hero {
-height: 200px;
-}
 }
 
+/* WORK */
 .work-list {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -209,7 +202,7 @@ gap: 16px;
 background: var(--card);
 padding: 16px;
 border-radius: 10px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .work-item:hover {
@@ -240,12 +233,12 @@ margin-top: 30px;
 <body>
 <div class="container">
 
-<!-- HERO PANEL -->
+<!-- HERO -->
 <section class="hero">
 <div class="hero-grid">
 <div class="hero-stat">
 <h3>70M+</h3>
-<p>YouTube views</p>
+<p>Views on personal YouTube channel</p>
 </div>
 <div class="hero-stat">
 <h3>#1</h3>
@@ -253,12 +246,12 @@ margin-top: 30px;
 </div>
 <div class="hero-stat">
 <h3>1M+</h3>
-<p>Combined subscribers</p>
+<p>Combined subscribers across social platforms</p>
 </div>
 </div>
 </section>
 
-<!-- TOP YOUTUBE LINK -->
+<!-- YOUTUBE TOP -->
 <div class="youtube-top">
 <div>🎥 Featured: Gaming With Griff Griffin</div>
 <a href="https://youtube.com/" target="_blank">Visit YouTube Channel →</a>
@@ -270,7 +263,8 @@ margin-top: 30px;
 <div>
 <h1>Griff Griffin</h1>
 <p class="subtitle">
-Award-winning copywriter and content creator working with global brands across finance, entertainment, culture, and media.
+Award-winning copywriter and content creator with significant experience
+working with global brands across finance, entertainment, culture, and media.
 </p>
 </div>
 </div>
@@ -283,9 +277,9 @@ Toggle Dark Mode
 <!-- FEATURED WORK -->
 <section>
 <h2>Featured Work</h2>
+
 <div class="image-grid">
 
-<!-- MAIN HERO IMAGE (LCP - now smaller) -->
 <img src="images/youtube-channel.png" alt="Gaming With Griff Griffin YouTube channel" class="hero">
 
 <img src="images/xbox.png" alt="Xbox work">
@@ -302,26 +296,39 @@ Toggle Dark Mode
 <!-- WORK -->
 <section>
 <h2>Selected Writing & Brand Work</h2>
+
 <div class="work-list">
 
 <div class="work-item">
 <h3>Xbox</h3>
-<p>Producer and copywriter on Microsoft’s Xbox content campaigns and scripts.</p>
+<p>
+Producer and copywriter on Microsoft’s official Xbox YouTube channel,
+creating scripts, social copy, and campaign messaging for a global audience.
+</p>
 </div>
 
 <div class="work-item">
 <h3>Equiti</h3>
-<p>Global financial campaign copy across multiple markets and platforms.</p>
+<p>
+Copywriter on a global financial consultant, delivering campaign, product,
+and social copy across multiple international markets.
+</p>
 </div>
 
 <div class="work-item">
 <h3>Newsweek</h3>
-<p>High-traffic entertainment and culture journalism with SEO focus.</p>
+<p>
+Freelance journalist producing high-traffic entertainment and culture
+coverage with a strong focus on SEO performance and audience growth.
+</p>
 </div>
 
 <div class="work-item">
 <h3>Frontier Developments</h3>
-<p>Lead copywriter on major game launches including Jurassic World Evolution 2.</p>
+<p>
+Lead copywriter on major video game launches including Jurassic World Evolution 2,
+supporting global campaigns and commercial storytelling.
+</p>
 </div>
 
 </div>
@@ -331,7 +338,8 @@ Toggle Dark Mode
 <section>
 <h2>Content Creation</h2>
 <p class="subtitle">
-Personal YouTube channel with <strong>~100,000 subscribers</strong> and <strong>70M+ views</strong>, alongside branded campaigns generating millions of impressions.
+Personal YouTube channel with <strong>approximately 100,000 subscribers</strong> and
+<strong>70+ million total views</strong>, alongside branded campaigns and content that generate millions of views.
 </p>
 </section>
 
