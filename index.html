@@ -1,276 +1,300 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Griff Griffin – Award-Winning Copywriter & Content Creator</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Griff Griffin – Award-Winning Copywriter & Content Creator</title>
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #555;
-      --card: #f4f4f4;
-      --accent: #000;
-    }
+<style>
+:root {
+--bg: #ffffff;
+--text: #111111;
+--muted: #555;
+--card: #f4f4f4;
+--accent: #000;
+}
 
-    body.dark {
-      --bg: #0f0f0f;
-      --text: #f5f5f5;
-      --muted: #aaa;
-      --card: #1a1a1a;
-      --accent: #fff;
-    }
+body.dark {
+--bg: #0f0f0f;
+--text: #f5f5f5;
+--muted: #aaa;
+--card: #1a1a1a;
+--accent: #fff;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.container {
+max-width: 1100px;
+margin: auto;
+padding: 40px 20px;
+}
 
-    /* HERO PANEL */
-    .hero {
-      background: var(--card);
-      padding: 30px 20px;
-      border-radius: 8px;
-      margin-bottom: 60px;
-    }
+/* HERO PANEL */
+.hero {
+background: var(--card);
+padding: 30px 20px;
+border-radius: 8px;
+margin-bottom: 60px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
+.hero-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+text-align: center;
+}
 
-    .hero-stat h3 {
-      margin: 0;
-      font-size: 2rem;
-    }
+.hero-stat h3 {
+margin: 0;
+font-size: 2rem;
+}
 
-    .hero-stat p {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.hero-stat p {
+margin: 6px 0 0;
+color: var(--muted);
+font-size: 0.95rem;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 70px;
-    }
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 70px;
+}
 
-    .intro {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.intro {
+display: flex;
+gap: 40px;
+align-items: center;
+flex-wrap: wrap;
+}
 
-    .intro img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+.intro img {
+width: 160px;
+height: 160px;
+border-radius: 50%;
+object-fit: cover;
+}
 
-    h1 {
-      font-size: 2.8rem;
-      margin: 0;
-    }
+h1 {
+font-size: 2.8rem;
+margin: 0;
+}
 
-    .subtitle {
-      color: var(--muted);
-      max-width: 650px;
-      margin-top: 10px;
-    }
+.subtitle {
+color: var(--muted);
+max-width: 650px;
+margin-top: 10px;
+}
 
-    button {
-      background: none;
-      border: 1px solid var(--text);
-      color: var(--text);
-      padding: 8px 14px;
-      cursor: pointer;
-    }
+button {
+background: none;
+border: 1px solid var(--text);
+color: var(--text);
+padding: 8px 14px;
+cursor: pointer;
+}
 
-    section {
-      margin-bottom: 80px;
-    }
+section {
+margin-bottom: 80px;
+}
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
+h2 {
+font-size: 2rem;
+margin-bottom: 30px;
+}
 
-    /* IMAGE GRID */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 26px;
-    }
+/* IMAGE GRID */
+.image-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+grid-template-columns: repeat(4, 1fr);
+gap: 26px;
+}
 
-    .image-grid img {
-      width: 100%;
-      display: block;
-      border-radius: 6px;
-    }
+.image-grid img {
+width: 100%;
+display: block;
+border-radius: 6px;
+}
 
-    .image-grid .featured {
-      grid-column: span 2;
-    }
+.image-grid .featured {
+grid-column: span 2;
+}
 
-    @media (max-width: 800px) {
-      .image-grid {
-        grid-template-columns: 1fr;
-      }
+@media (max-width: 800px) {
+.image-grid {
+grid-template-columns: 1fr;
+}
 
-      .image-grid .featured {
-        grid-column: span 1;
-      }
-    }
+.image-grid .featured {
+grid-column: span 1;
+}
+}
 
-    .work-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
+.work-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 24px;
+}
 
-    .work-item {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 6px;
-    }
+.work-item {
+background: var(--card);
+padding: 20px;
+border-radius: 6px;
+}
 
-    .work-item h3 {
-      margin: 0 0 8px;
-      font-size: 1.2rem;
-    }
+.work-item h3 {
+margin: 0 0 8px;
+font-size: 1.2rem;
+}
 
-    .work-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.work-item p {
+margin: 0;
+color: var(--muted);
+font-size: 0.95rem;
+}
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-  </style>
+footer {
+text-align: center;
+color: var(--muted);
+font-size: 0.9rem;
+margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HERO PANEL -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-stat">
-          <h3>65M+</h3>
-          <p>YouTube views on personal channel</p>
-        </div>
-        <div class="hero-stat">
-          <h3>#1</h3>
-          <p>Ranked author at Newsweek</p>
-        </div>
-        <div class="hero-stat">
-          <h3>1M+</h3>
-          <p>Combined subscribers across social platforms</p>
-        </div>
-      </div>
-    </section>
+<!-- HERO PANEL -->
+<section class="hero">
+<div class="hero-grid">
+<div class="hero-stat">
+<h3>70M+</h3>
+<p>Views on personal YouTube channel</p>
+<p>YouTube views on personal channel</p>
+</div>
+<div class="hero-stat">
+<h3>#1</h3>
+<p>Ranked author at Newsweek</p>
+</div>
+<div class="hero-stat">
+<h3>1M+</h3>
+<p>Combined subscribers across social platforms</p>
+</div>
+</div>
+</section>
 
-    <header>
-      <div class="intro">
-        <img src="images/Doodle.PNG" alt="Griff Griffin headshot">
-        <div>
-          <h1>Griff Griffin</h1>
-          <p class="subtitle">
-            Award-winning copywriter and content creator with significant experience
-            working with global brands across finance, entertainment, culture, and media.
-          </p>
-        </div>
-      </div>
+<header>
+<div class="intro">
+<img src="images/Doodle.PNG" alt="Griff Griffin headshot">
+<div>
+<h1>Griff Griffin</h1>
+<p class="subtitle">
+Award-winning copywriter and content creator with significant experience
+working with global brands across finance, entertainment, culture, and media.
+</p>
+</div>
+</div>
 
-      <button onclick="document.body.classList.toggle('dark')">
-        Toggle Dark Mode
-      </button>
-    </header>
+<button onclick="document.body.classList.toggle('dark')">
+Toggle Dark Mode
+</button>
+</header>
 
-    <!-- FEATURED WORK -->
-    <section>
-      <h2>Featured Work</h2>
-      <div class="image-grid">
-        <img src="images/xbox.png" alt="Xbox work" class="featured">
-        <img src="images/equiti-youtube.png" alt="Equiti YouTube campaign" class="featured">
-        <img src="images/steam.png" alt="Frontier Developments on Steam" class="featured">
-        <img src="images/equiti-site.png" alt="Equiti site campaign">
-        <img src="images/newsweek.png" alt="Newsweek articles">
-        <img src="images/the-sun.jpg" alt="The Sun coverage">
-      </div>
-    </section>
+<!-- FEATURED WORK -->
+<section>
+<h2>Featured Work</h2>
+<div class="image-grid">
+<img src="images/xbox.png" alt="Xbox work" class="featured">
+<img src="images/equiti-site.png" alt="Equiti site campaign">
+<img src="images/equiti-youtube.png" alt="Equiti YouTube campaign">
+<img src="images/newsweek.png" alt="Newsweek articles">
+<img src="images/steam.png" alt="Frontier Developments on Steam" class="featured">
+<img src="images/the-sun.jpg" alt="The Sun coverage">
+</div>
+</section>
 
-    <!-- SELECTED WRITING & BRAND WORK -->
-    <section>
-      <h2>Selected Writing & Brand Work</h2>
-      <div class="work-list">
-        <div class="work-item">
-          <h3>Xbox</h3>
-          <p>
-            Producer and copywriter on Microsoft’s official Xbox YouTube channel,
-            creating scripts, social copy, and campaign messaging for a global audience.
-          </p>
-        </div>
+<section>
+<h2>Featured Work</h2>
+<div class="image-grid">
+<img src="images/xbox.png" alt="Xbox work" class="featured">
+<img src="images/equiti-youtube.png" alt="Equiti YouTube campaign" class="featured">
+<img src="images/steam.png" alt="Frontier Developments on Steam" class="featured">
+<img src="images/equiti-site.png" alt="Equiti site campaign">
+<img src="images/newsweek.png" alt="Newsweek articles">
+<img src="images/the-sun.jpg" alt="The Sun coverage">
+</div>
+</section>
 
-        <div class="work-item">
-          <h3>Equiti</h3>
-          <p>
-            Copywriter on a global financial consultant, delivering campaign, product,
-            and social copy across multiple international markets.
-          </p>
-        </div>
+<!-- SELECTED WRITING & BRAND WORK -->
+<section>
+<h2>Selected Writing & Brand Work</h2>
+<div class="work-list">
+<div class="work-item">
+<h3>Xbox</h3>
+<p>
+Producer and copywriter on Microsoft’s official Xbox YouTube channel,
+creating scripts, social copy, and campaign messaging for a global audience.
+</p>
+</div>
 
-        <div class="work-item">
-          <h3>Newsweek</h3>
-          <p>
-            Freelance journalist producing high-traffic entertainment and culture
-            coverage with a strong focus on SEO performance and audience growth.
-          </p>
-        </div>
+<div class="work-item">
+<h3>Equiti</h3>
+<p>
+Copywriter on a global financial consultant, delivering campaign, product,
+and social copy across multiple international markets.
+</p>
+</div>
 
-        <div class="work-item">
-          <h3>Frontier Developments</h3>
-          <p>
-            Lead copywriter on major game launches including Jurassic World Evolution 2,
-            supporting global campaigns and commercial storytelling.
-          </p>
-        </div>
-      </div>
-    </section>
+<div class="work-item">
+<h3>Newsweek</h3>
+<p>
+Freelance journalist producing high-traffic entertainment and culture
+coverage with a strong focus on SEO performance and audience growth.
+</p>
+</div>
 
-    <!-- CONTENT CREATION -->
-    <section>
-      <h2>Content Creation</h2>
-      <p class="subtitle">
-        Personal YouTube channel with <strong>100,000 subscribers</strong> and
-        <strong>65+ million total views</strong>, alongside branded campaigns and content that generate millions of views.
-      </p>
-    </section>
+<div class="work-item">
+<h3>Frontier Developments</h3>
+<p>
+Lead copywriter on major video game launches including Jurassic World Evolution 2,
+Lead copywriter on major game launches including Jurassic World Evolution 2,
+supporting global campaigns and commercial storytelling.
+</p>
+</div>
+</div>
+</section>
 
-    <footer>
-      © 2026 Griff Griffin
-    </footer>
-  </div>
+<!-- CONTENT CREATION -->
+<section>
+<h2>Content Creation</h2>
+<p class="subtitle">
+Personal YouTube channel with <strong>approximately 100,000 subscribers</strong> and
+<strong>70+ million total views</strong>, alongside branded campaigns and content that generate millions of views.
+</p>
+</section>
+
+<!-- NEW IMAGES ADDED -->
+<section>
+<h2>Additional Work</h2>
+<div class="image-grid">
+<img src="images/youtube-channel.png" alt="YouTube channel screenshot" class="featured">
+<img src="images/lcp-campaign.png" alt="LCP campaign work" class="featured">
+</div>
+</section>
+
+<footer>
+© 2026 Griff Griffin
+</footer>
+</div>
 </body>
 </html>
