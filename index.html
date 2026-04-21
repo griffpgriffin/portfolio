@@ -27,155 +27,212 @@ margin: 0;
 font-family: Arial, Helvetica, sans-serif;
 background: var(--bg);
 color: var(--text);
-line-height: 1.6;
+line-height: 1.5;
 }
 
 .container {
 max-width: 1100px;
 margin: auto;
-padding: 40px 20px;
+padding: 28px 18px;
 }
 
 /* HERO PANEL */
 .hero {
 background: var(--card);
-padding: 30px 20px;
-border-radius: 8px;
-margin-bottom: 60px;
+padding: 22px 18px;
+border-radius: 10px;
+margin-bottom: 40px;
 }
 
 .hero-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 14px;
 text-align: center;
 }
 
 .hero-stat h3 {
 margin: 0;
-font-size: 2rem;
+font-size: 1.8rem;
 }
 
 .hero-stat p {
-margin: 6px 0 0;
+margin: 4px 0 0;
 color: var(--muted);
-font-size: 0.95rem;
+font-size: 0.9rem;
 }
 
 header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom: 70px;
+margin-bottom: 30px;
+gap: 20px;
 }
 
 .intro {
 display: flex;
-gap: 40px;
+gap: 24px;
 align-items: center;
 flex-wrap: wrap;
 }
 
 .intro img {
-width: 160px;
-height: 160px;
+width: 140px;
+height: 140px;
 border-radius: 50%;
 object-fit: cover;
 }
 
 h1 {
-font-size: 2.8rem;
+font-size: 2.4rem;
 margin: 0;
+letter-spacing: -0.5px;
 }
 
 .subtitle {
 color: var(--muted);
 max-width: 650px;
-margin-top: 10px;
+margin-top: 6px;
 }
 
 button {
 background: none;
 border: 1px solid var(--text);
 color: var(--text);
-padding: 8px 14px;
+padding: 7px 12px;
 cursor: pointer;
+border-radius: 4px;
 }
 
+/* YouTube TOP LINK BLOCK */
+.youtube-top {
+margin: 10px 0 25px;
+padding: 14px 16px;
+background: var(--card);
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.youtube-top a {
+color: var(--text);
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid transparent;
+transition: 0.2s ease;
+}
+
+.youtube-top a:hover {
+border-bottom: 1px solid var(--text);
+}
+
+/* SECTIONS */
 section {
-margin-bottom: 80px;
+margin-bottom: 50px;
 }
 
 h2 {
-font-size: 2rem;
-margin-bottom: 30px;
+font-size: 1.6rem;
+margin-bottom: 18px;
+letter-spacing: -0.3px;
 }
 
-/* IMAGE GRID */
+/* IMAGE GRID — AGENCY STYLE */
 .image-grid {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 26px;
+grid-template-columns: repeat(12, 1fr);
+gap: 14px;
 }
 
+/* base images */
 .image-grid img {
 width: 100%;
-height: 200px;
+height: 170px;
 object-fit: cover;
 display: block;
-border-radius: 6px;
+border-radius: 10px;
+transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+will-change: transform;
 }
 
-/* HERO FEATURE IMAGE (YouTube channel) */
+/* hover zoom effect */
+.image-grid img:hover {
+transform: scale(1.04);
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+filter: brightness(1.02);
+}
+
+/* LCP / HERO IMAGE (smaller + cleaner) */
 .image-grid .hero {
-grid-column: span 4;
-height: 420px;
-object-fit: cover;
+grid-column: span 12;
+height: 300px;
+border-radius: 12px;
 }
 
-@media (max-width: 800px) {
-.image-grid {
-grid-template-columns: 1fr;
+/* tighter grid items (agency layout feel) */
+.image-grid img:not(.hero) {
+grid-column: span 3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+.image-grid img:not(.hero) {
+grid-column: span 6;
 }
 
 .image-grid .hero {
-grid-column: span 1;
-height: auto;
+height: 220px;
+}
 }
 
-.image-grid img {
-height: auto;
+@media (max-width: 600px) {
+.image-grid img:not(.hero) {
+grid-column: span 12;
+}
+
+.image-grid .hero {
+height: 200px;
 }
 }
 
 .work-list {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-gap: 24px;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 16px;
 }
 
 .work-item {
 background: var(--card);
-padding: 20px;
-border-radius: 6px;
+padding: 16px;
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .work-item h3 {
-margin: 0 0 8px;
-font-size: 1.2rem;
+margin: 0 0 6px;
+font-size: 1.1rem;
 }
 
 .work-item p {
 margin: 0;
 color: var(--muted);
-font-size: 0.95rem;
+font-size: 0.9rem;
 }
 
 footer {
 text-align: center;
 color: var(--muted);
-font-size: 0.9rem;
-margin-top: 40px;
+font-size: 0.85rem;
+margin-top: 30px;
 }
 </style>
 </head>
@@ -188,8 +245,7 @@ margin-top: 40px;
 <div class="hero-grid">
 <div class="hero-stat">
 <h3>70M+</h3>
-<p>Views on personal YouTube channel</p>
-<p>YouTube views on personal channel</p>
+<p>YouTube views</p>
 </div>
 <div class="hero-stat">
 <h3>#1</h3>
@@ -197,10 +253,16 @@ margin-top: 40px;
 </div>
 <div class="hero-stat">
 <h3>1M+</h3>
-<p>Combined subscribers across social platforms</p>
+<p>Combined subscribers</p>
 </div>
 </div>
 </section>
+
+<!-- TOP YOUTUBE LINK -->
+<div class="youtube-top">
+<div>🎥 Featured: Gaming With Griff Griffin</div>
+<a href="https://youtube.com/" target="_blank">Visit YouTube Channel →</a>
+</div>
 
 <header>
 <div class="intro">
@@ -208,8 +270,7 @@ margin-top: 40px;
 <div>
 <h1>Griff Griffin</h1>
 <p class="subtitle">
-Award-winning copywriter and content creator with significant experience
-working with global brands across finance, entertainment, culture, and media.
+Award-winning copywriter and content creator working with global brands across finance, entertainment, culture, and media.
 </p>
 </div>
 </div>
@@ -224,10 +285,9 @@ Toggle Dark Mode
 <h2>Featured Work</h2>
 <div class="image-grid">
 
-<!-- MAIN HERO IMAGE -->
+<!-- MAIN HERO IMAGE (LCP - now smaller) -->
 <img src="images/youtube-channel.png" alt="Gaming With Griff Griffin YouTube channel" class="hero">
 
-<!-- OTHER WORK -->
 <img src="images/xbox.png" alt="Xbox work">
 <img src="images/equiti-site.png" alt="Equiti site campaign">
 <img src="images/equiti-youtube.png" alt="Equiti YouTube campaign">
@@ -239,41 +299,31 @@ Toggle Dark Mode
 </div>
 </section>
 
-<!-- SELECTED WRITING & BRAND WORK -->
+<!-- WORK -->
 <section>
 <h2>Selected Writing & Brand Work</h2>
 <div class="work-list">
+
 <div class="work-item">
 <h3>Xbox</h3>
-<p>
-Producer and copywriter on Microsoft’s official Xbox YouTube channel,
-creating scripts, social copy, and campaign messaging for a global audience.
-</p>
+<p>Producer and copywriter on Microsoft’s Xbox content campaigns and scripts.</p>
 </div>
 
 <div class="work-item">
 <h3>Equiti</h3>
-<p>
-Copywriter on a global financial consultant, delivering campaign, product,
-and social copy across multiple international markets.
-</p>
+<p>Global financial campaign copy across multiple markets and platforms.</p>
 </div>
 
 <div class="work-item">
 <h3>Newsweek</h3>
-<p>
-Freelance journalist producing high-traffic entertainment and culture
-coverage with a strong focus on SEO performance and audience growth.
-</p>
+<p>High-traffic entertainment and culture journalism with SEO focus.</p>
 </div>
 
 <div class="work-item">
 <h3>Frontier Developments</h3>
-<p>
-Lead copywriter on major video game launches including Jurassic World Evolution 2,
-supporting global campaigns and commercial storytelling.
-</p>
+<p>Lead copywriter on major game launches including Jurassic World Evolution 2.</p>
 </div>
+
 </div>
 </section>
 
@@ -281,8 +331,7 @@ supporting global campaigns and commercial storytelling.
 <section>
 <h2>Content Creation</h2>
 <p class="subtitle">
-Personal YouTube channel with <strong>approximately 100,000 subscribers</strong> and
-<strong>70+ million total views</strong>, alongside branded campaigns and content that generate millions of views.
+Personal YouTube channel with <strong>~100,000 subscribers</strong> and <strong>70M+ views</strong>, alongside branded campaigns generating millions of impressions.
 </p>
 </section>
 
