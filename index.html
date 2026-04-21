@@ -104,30 +104,6 @@ cursor: pointer;
 border-radius: 4px;
 }
 
-/* YOUTUBE TOP */
-.youtube-top {
-margin: 10px 0 22px;
-padding: 14px 16px;
-background: var(--card);
-border-radius: 10px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-}
-
-.youtube-top a {
-color: var(--text);
-text-decoration: none;
-font-weight: bold;
-border-bottom: 1px solid transparent;
-transition: 0.2s ease;
-}
-
-.youtube-top a:hover {
-border-bottom: 1px solid var(--text);
-}
-
 /* SECTIONS */
 section {
 margin-bottom: 45px;
@@ -138,60 +114,42 @@ font-size: 1.6rem;
 margin-bottom: 18px;
 }
 
-/* IMAGE GRID */
-.image-grid {
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-gap: 14px;
+/* =========================
+   FEATURED WORK (NO GRID)
+   Clean agency vertical layout
+========================= */
+
+.featured-images {
+display: flex;
+flex-direction: column;
+gap: 16px;
 }
 
-.image-grid img {
+/* all images */
+.featured-images img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 10px;
 transition: transform 0.35s ease, box-shadow 0.35s ease;
-transform-origin: center;
 }
 
 /* hover zoom */
-.image-grid img:hover {
-transform: scale(1.03);
+.featured-images img:hover {
+transform: scale(1.02);
 box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-/* LCP image (smaller, no cropping) */
-.image-grid .hero {
-grid-column: span 12;
-max-height: 320px;
+/* LCP IMAGE (smaller, no cropping) */
+.featured-images .hero-img {
+max-height: 260px;
 object-fit: contain;
 background: #00000008;
 padding: 10px;
 border-radius: 12px;
 }
 
-/* other images */
-.image-grid img:not(.hero) {
-grid-column: span 3;
-object-fit: contain;
-background: #00000005;
-padding: 6px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-.image-grid img:not(.hero) {
-grid-column: span 6;
-}
-}
-
-@media (max-width: 600px) {
-.image-grid img:not(.hero) {
-grid-column: span 12;
-}
-}
-
-/* WORK */
+/* WORK SECTION */
 .work-list {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -233,12 +191,13 @@ margin-top: 30px;
 <body>
 <div class="container">
 
-<!-- HERO -->
+<!-- HERO PANEL -->
 <section class="hero">
 <div class="hero-grid">
 <div class="hero-stat">
 <h3>70M+</h3>
 <p>Views on personal YouTube channel</p>
+<p>YouTube views on personal channel</p>
 </div>
 <div class="hero-stat">
 <h3>#1</h3>
@@ -250,12 +209,6 @@ margin-top: 30px;
 </div>
 </div>
 </section>
-
-<!-- YOUTUBE TOP -->
-<div class="youtube-top">
-<div>🎥 Featured: Gaming With Griff Griffin</div>
-<a href="https://youtube.com/" target="_blank">Visit YouTube Channel →</a>
-</div>
 
 <header>
 <div class="intro">
@@ -278,9 +231,9 @@ Toggle Dark Mode
 <section>
 <h2>Featured Work</h2>
 
-<div class="image-grid">
+<div class="featured-images">
 
-<img src="images/youtube-channel.png" alt="Gaming With Griff Griffin YouTube channel" class="hero">
+<img src="images/youtube-channel.png" alt="Gaming With Griff Griffin YouTube channel" class="hero-img">
 
 <img src="images/xbox.png" alt="Xbox work">
 <img src="images/equiti-site.png" alt="Equiti site campaign">
@@ -293,7 +246,7 @@ Toggle Dark Mode
 </div>
 </section>
 
-<!-- WORK -->
+<!-- SELECTED WORK -->
 <section>
 <h2>Selected Writing & Brand Work</h2>
 
